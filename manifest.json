@@ -1,0 +1,20 @@
+{
+  "extensionId": "@external/osano",
+  "version": "0.1",
+  "name": "Osano",
+  "isBeta": true,
+  "description": "Make Smart Builder pages GDPR compliant with Osano cookie consent management",
+  "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/2/28/HelloWorld.svg",
+  "moreInfoUrl": "https://en.wikipedia.org/wiki/%22Hello,_World!%22_program",
+  "categories": ["gdpr", "cookies", "compliance", "script"],
+  "include": [],
+  "settings": {
+    "id": {
+      "type": "string",
+      "label": "Osano",
+      "required": true,
+      "placeholder": "12345678910"
+    }
+  },
+  "externalScripts": ["http://localhost:8081/index.js"]
+}
