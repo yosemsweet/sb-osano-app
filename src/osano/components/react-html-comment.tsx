@@ -1,11 +1,14 @@
-import React, { useEffect } from 'react';
+import React, { useLayoutEffect } from 'react';
 
 type DataStructure = { text: string };
 
 const HTMLComment = ({ text }: DataStructure ) => {
   const ref = React.createRef<HTMLElement>();
 
-  useEffect(() => {
+  // Can't use useLayoutEffect because that doesn't get invoked with SSR
+  // Have tried useEffect but we don't seem to be replacing the placeholder span
+  // What I haven't figured out yet is how to debug during hydration
+  useLayoutEffect(() => {
     let placeholder : HTMLElement | null = null;
     let parent : Node | null = null;
     let comment : Comment | null = null;
