@@ -8,6 +8,7 @@ This app gives the customers the ability to use Osano cookie and consent managem
 
 ## Developing apps locally using the Smart Builder
 
+### Browser driven development:
 1. Run `npm i` from the root directory.
 2. Run `npm start`. This will build the app and watch for changes.
 3. In a different terminal, run `npm run serve`
@@ -16,3 +17,8 @@ This app gives the customers the ability to use Osano cookie and consent managem
 6. Copy and paste the `manifest.json` file from this repo into the box.
 7. Now scroll up and find your app in the sidebar. Press the + button in the corner.
 8. Voila - you are now using the local version your app running on your machine.
+
+
+### Test driven development
+1. Run `npm run test:watch` from the root directory
+2. Start making tests

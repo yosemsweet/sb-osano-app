@@ -13,6 +13,7 @@
     "check-types": "tsc --noEmit",
     "lint": "npm run lint:prettier && npm run lint:eslint",
     "test": "jest",
+    "test:watch": "jest -o --watch",
     "lint:eslint": "eslint src --ext .ts,.tsx",
     "lint:prettier": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\"",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",

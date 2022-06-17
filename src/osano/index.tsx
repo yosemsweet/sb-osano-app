@@ -1,4 +1,3 @@
-import React from 'react';
 import { component, Schema } from 'ub-shared';
 
 import Osano from './components/osano';
@@ -12,8 +11,8 @@ export const Component = component({
   componentTypeId: 'osano', // This is the id for your component in our system, must be camelCase. It is used to reference the component in places like templates
   displayName: 'Osano Cookie Consent Management',
   tags: ['head-script'],
-  schema,
+  schema: schema.noControls(),
   Component: Osano,
   version: migrations.length,
-  migrations,
+  migrations: migrations,
 });

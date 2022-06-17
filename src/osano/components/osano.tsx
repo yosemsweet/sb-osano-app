@@ -1,18 +1,13 @@
 import React from 'react';
 import { ComponentProps } from 'unbounce-smart-builder-sdk-types';
-import './react-html-comment';
+import { OsanoProps } from '../types';
 
-export type DataStructure = { id: string };
-
-const Osano = ({ data, dispatch}: ComponentProps<DataStructure>) => {
-  // `<!-- ub:disable_server_cookies --> <!-- id='${data.id}' -->`
+const Osano = ( { data } : ComponentProps<OsanoProps>) => {
   return (
     <>
-      <script dangerouslySetInnerHTML={{__html: `<!-- ub:disable_server_cookies -->`}}/>
-
-      <script dangerouslySetInnerHTML={{__html:
-        `function osano(){}`
-      }} />
+      <script data-testid="osano-script"
+        src={`https://cmp.osano.com/${data.id}/osano.js`}
+      />
     </>
   );
 };
